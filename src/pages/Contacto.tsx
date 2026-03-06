@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 import './Contacto.css';
 
@@ -62,6 +63,13 @@ const Contacto = () => {
 
   return (
     <div className="contacto">
+      <Helmet>
+        <title>Contacto - TOW OVERLAND | Solicita tu Cotización</title>
+        <meta name="description" content="Contáctanos para solicitar tu enganche americano personalizado. Atención rápida y cotización sin compromiso. WhatsApp +56 9 8511 2929" />
+        <meta name="keywords" content="contacto tow overland, cotización enganche, solicitar enganche, contacto enganches chile" />
+        <link rel="canonical" href="https://towoverland.com/contacto" />
+      </Helmet>
+      
       <section className="contacto-hero">
         <h1>Contáctanos</h1>
         <p>Estamos aquí para ayudarte</p>

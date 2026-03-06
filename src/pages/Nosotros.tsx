@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import ImageCarousel from '../components/ImageCarousel';
 import './Nosotros.css';
 
@@ -14,6 +15,13 @@ const Nosotros = () => {
 
   return (
     <div className="nosotros">
+      <Helmet>
+        <title>Sobre Nosotros - TOW OVERLAND | Expertos en Enganches</title>
+        <meta name="description" content="Conoce a TOW OVERLAND, especialistas en fabricación de enganches americanos personalizados. Experiencia, calidad y compromiso con cada cliente." />
+        <meta name="keywords" content="tow overland, empresa enganches, fabricación enganches, enganches personalizados chile" />
+        <link rel="canonical" href="https://towoverland.com/nosotros" />
+      </Helmet>
+      
       <section className="nosotros-hero">
         <h1>Sobre Nosotros</h1>
         <p>Expertos en Enganches Americanos a Medida</p>

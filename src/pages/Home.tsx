@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+import StructuredData from '../components/StructuredData';
 import './Home.css';
 
 const Home = () => {
@@ -13,6 +15,14 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>TOW OVERLAND - Enganches Americanos a Medida | Chile</title>
+        <meta name="description" content="Fabricación de enganches americanos a medida en Chile. Diseñados desde cero y apernados directo al chasis. Calidad superior y ajuste perfecto garantizado." />
+        <meta name="keywords" content="enganches americanos chile, enganche a medida, enganche chasis, tow overland, enganches remolque" />
+        <link rel="canonical" href="https://towoverland.com/" />
+      </Helmet>
+      <StructuredData />
+      
       <section className="hero">
         <h1>Bienvenido a Tow Overland</h1>
         <p className="hero-subtitle">Enganches Americanos de Calidad Superior</p>

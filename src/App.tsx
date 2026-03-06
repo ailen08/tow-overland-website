@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -26,24 +27,26 @@ function App() {
   const whatsappNumber = '56985112929';
 
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/nosotros" element={<Nosotros />} />
-            <Route path="/contacto" element={<Contacto />} />
-          </Routes>
-        </main>
-        <Footer />
-        <WhatsAppButton 
-          phoneNumber={whatsappNumber}
-          message="Hola! Me gustaría hacer una reserva para un enganche americano"
-        />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="app">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/nosotros" element={<Nosotros />} />
+              <Route path="/contacto" element={<Contacto />} />
+            </Routes>
+          </main>
+          <Footer />
+          <WhatsAppButton 
+            phoneNumber={whatsappNumber}
+            message="Hola! Me gustaría hacer una reserva para un enganche americano"
+          />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
